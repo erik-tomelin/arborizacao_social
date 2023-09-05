@@ -54,6 +54,10 @@ A publicação será automatizada através da integração contínua (CI/CD). A 
 
 Este README fornece uma visão geral da arquitetura do projeto de venda de plantas sob demanda, detalhando as decisões arquiteturais, gestão de configuração e publicação. Mantendo esse documento atualizado e seguindo as diretrizes aqui definidas, o desenvolvimento e manutenção do sistema serão conduzidos de forma eficaz e alinhada aos objetivos de negócio.
 
+## Diagrama entidade relacionamento (UML)
+
+![casoDeUso(arborizacao) drawio](https://github.com/erik-tomelin/arborizacao_social/assets/63420907/d536153b-4eb3-498b-a692-484f06410ada)
+
 ## C4 model
 
 ![C4(2)](https://github.com/erik-tomelin/arborizacao_social/assets/63420907/26d60e8a-29a0-42c1-98fb-4d99f4091f98)
