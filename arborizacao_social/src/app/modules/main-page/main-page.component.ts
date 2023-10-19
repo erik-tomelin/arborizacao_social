@@ -6,6 +6,8 @@ import { Component, ViewChild } from '@angular/core';
 })
 
 export class MainPageComponent {
+    teste = "teste"
+
     constructor(
     ) {
     }
