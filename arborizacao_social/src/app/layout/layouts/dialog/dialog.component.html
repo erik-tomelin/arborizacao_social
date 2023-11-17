@@ -1,0 +1,33 @@
+<mat-stepper [linear]="true" #stepper>
+    <mat-step [stepControl]="firstFormGroup">
+        <form [formGroup]="firstFormGroup">
+            <ng-template matStepLabel>Quantas plantas?</ng-template>
+            <mat-form-field class="w-full">
+                <mat-label>Numero de plantas</mat-label>
+                <input matInput formControlName="firstCtrl" required>
+            </mat-form-field>
+            <div style="text-align-last: right;">
+                <button mat-button matStepperNext>Próximo</button>
+            </div>
+        </form>
+    </mat-step>
+    <mat-step [stepControl]="secondFormGroup" label="Quanto tempo?">
+        <form [formGroup]="secondFormGroup">
+            <mat-form-field class="w-full">
+                <mat-label>A quanto tempo você cuida das suas plantas? (Em meses)</mat-label>
+                <input matInput formControlName="secondCtrl" placeholder="Ex.: 5..." required>
+            </mat-form-field>
+            <div style="text-align-last: right;">
+                <button mat-button matStepperPrevious>Anterior</button>
+                <button mat-button matStepperNext>Próximo</button>
+            </div>
+        </form>
+    </mat-step>
+    <mat-step>
+        <ng-template matStepLabel>Prontinho</ng-template>
+        <p>Agora podemos navegar juntos!.</p>
+        <div style="text-align-last: right;">
+            <button mat-button (click)="onNoClick()">Fechar</button>
+        </div>
+    </mat-step>
+</mat-stepper>

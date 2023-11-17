@@ -1,10 +1,11 @@
-import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
-import { RouterModule } from '@angular/router';
+import { NgModule } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
+import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
+import { RouterModule } from '@angular/router';
 import { FuseFullscreenModule } from '@fuse/components/fullscreen';
 import { FuseLoadingBarModule } from '@fuse/components/loading-bar';
 import { FuseNavigationModule } from '@fuse/components/navigation';
@@ -16,7 +17,7 @@ import { MaterialLayoutComponent } from 'app/layout/layouts/horizontal/material/
     declarations: [
         MaterialLayoutComponent
     ],
-    imports     : [
+    imports: [
         HttpClientModule,
         RouterModule,
         MatButtonModule,
@@ -27,12 +28,11 @@ import { MaterialLayoutComponent } from 'app/layout/layouts/horizontal/material/
         FuseLoadingBarModule,
         FuseNavigationModule,
         SearchModule,
-        SharedModule
+        SharedModule,
     ],
-    exports     : [
+    exports: [
         MaterialLayoutComponent
     ]
 })
-export class MaterialLayoutModule
-{
+export class MaterialLayoutModule {
 }

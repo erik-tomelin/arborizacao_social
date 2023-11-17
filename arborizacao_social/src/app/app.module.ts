@@ -12,7 +12,6 @@ import { mockApiServices } from 'app/mock-api';
 import { LayoutModule } from 'app/layout/layout.module';
 import { AppComponent } from 'app/app.component';
 import { appRoutes } from 'app/app.routing';
-import { NgApexchartsModule } from 'ng-apexcharts';
 import { MainPageComponent } from './modules/main-page/main-page.component';
 
 const routerConfig: ExtraOptions = {
@@ -38,7 +37,6 @@ const routerConfig: ExtraOptions = {
         LayoutModule,
 
         MarkdownModule.forRoot({}),
-        NgApexchartsModule
     ],
     bootstrap: [
         AppComponent

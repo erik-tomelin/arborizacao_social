@@ -6,7 +6,7 @@ import { SharedModule } from 'app/shared/shared.module';
 
 @NgModule({
     declarations: [
-        LayoutComponent
+        LayoutComponent,
     ],
     imports: [
         SharedModule,
