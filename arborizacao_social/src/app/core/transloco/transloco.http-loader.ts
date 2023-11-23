@@ -6,27 +6,12 @@ import { Translation, TranslocoLoader } from '@ngneat/transloco';
 @Injectable({
     providedIn: 'root'
 })
-export class TranslocoHttpLoader implements TranslocoLoader
-{
-    /**
-     * Constructor
-     */
+export class TranslocoHttpLoader implements TranslocoLoader {
     constructor(
-        private _httpClient: HttpClient)
-    {
+        private _httpClient: HttpClient) {
     }
 
-    // -----------------------------------------------------------------------------------------------------
-    // @ Public methods
-    // -----------------------------------------------------------------------------------------------------
-
-    /**
-     * Get translation
-     *
-     * @param lang
-     */
-    getTranslation(lang: string): Observable<Translation>
-    {
+    getTranslation(lang: string): Observable<Translation> {
         return this._httpClient.get<Translation>(`./assets/i18n/${lang}.json`);
     }
 }

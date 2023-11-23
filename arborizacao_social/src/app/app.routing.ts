@@ -1,33 +1,31 @@
 import { Route } from '@angular/router';
-import { AuthGuard } from 'app/core/auth/guards/auth.guard';
-import { NoAuthGuard } from 'app/core/auth/guards/noAuth.guard';
-import { LayoutComponent } from 'app/layout/layout.component';
+import { MainPageComponent } from './modules/landing/main-page/main-page.component';
+import { PlantDetailsComponent } from './modules/landing/main-page/plants/plant-details/plant-details.component';
 
-// @formatter:off
-/* eslint-disable max-len */
-/* eslint-disable @typescript-eslint/explicit-function-return-type */
 export const appRoutes: Route[] = [
-
-    { path: '', pathMatch: 'full', redirectTo: 'main' },
-
+    { path: '', pathMatch: 'full', redirectTo: 'arborizacaoSocial' },
     {
         path: '',
-        component: LayoutComponent,
-        data: {
-            layout: 'empty'
-        },
-        children: [
-            { path: 'home', loadChildren: () => import('app/modules/landing/home/home.module').then(m => m.LandingHomeModule) },
-        ]
-    },
-
-    {
-        path: '',
-        component: LayoutComponent,
+        component: MainPageComponent,
         children: [
             {
-                path: 'main', loadChildren: () => import('app/modules/main-page/main-page.module').then(m => m.MainPageModule),
+                path: 'arborizacaoSocial',
+                loadChildren: () =>
+                    import('app/modules/landing/main-page/main-page.module').then(m => m.MainPageModule),
             },
+           
         ]
-    }
+    },
+    {
+        path: 'arborizacaoSocial',
+        component: PlantDetailsComponent,
+        children: [
+            {
+                path: ':scientific_name',
+                loadChildren: () =>
+                    import('app/modules/landing/main-page/plants/plant-details/plant-details.module').then(m => m.PlantDetailsModule),
+            },
+
+        ]
+    },
 ];

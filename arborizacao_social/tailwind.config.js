@@ -3,21 +3,11 @@ const colors = require('tailwindcss/colors');
 const defaultTheme = require('tailwindcss/defaultTheme');
 const generatePalette = require(path.resolve(__dirname, ('src/@fuse/tailwind/utils/generate-palette')));
 
-/**
- * Custom palettes
- *
- * Uses the generatePalette helper method to generate
- * Tailwind-like color palettes automatically
- */
 const customPalettes = {
     brand: generatePalette('#2196F3')
 };
 
-/**
- * Themes
- */
 const themes = {
-    // Default theme is required for theming system to work correctly
     'default': {
         primary  : {
             ...colors.indigo,
@@ -35,8 +25,6 @@ const themes = {
             500: colors.red['50']
         }
     },
-    // Rest of the themes will use the 'default' as the base
-    // theme and extend it with their given configuration
     'brand' : {
         primary: customPalettes.brand
     },
@@ -60,9 +48,6 @@ const themes = {
     }
 };
 
-/**
- * Tailwind configuration
- */
 const config = {
     darkMode   : 'class',
     content: [
@@ -93,12 +78,19 @@ const config = {
             lg: '1280px',
             xl: '1440px'
         },
-        extend  : {
+        extend: {
+            display: [
+                "group-hover"
+            ],
             animation               : {
                 'spin-slow': 'spin 3s linear infinite'
             },
             colors                  : {
-                gray: colors.slate
+                gray: colors.slate,
+                "primary-color": "var(--primary-color)",
+                "secondary-color": "var(--secondary-color)",
+                "bg-body": "var(--bg-body)",
+                "color_text": "var(--color_text)",
             },
             flex                    : {
                 '0': '0 0 auto'
@@ -284,7 +276,6 @@ const config = {
     },
     plugins    : [
 
-        // Fuse - Tailwind plugins
         require(path.resolve(__dirname, ('src/@fuse/tailwind/plugins/utilities'))),
         require(path.resolve(__dirname, ('src/@fuse/tailwind/plugins/icon-size'))),
         require(path.resolve(__dirname, ('src/@fuse/tailwind/plugins/theming')))({themes}),

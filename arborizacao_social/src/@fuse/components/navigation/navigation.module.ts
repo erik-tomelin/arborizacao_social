@@ -1,12 +1,11 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterModule } from '@angular/router';
+import { NgModule } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatTooltipModule } from '@angular/material/tooltip';
-import { FuseScrollbarModule } from '@fuse/directives/scrollbar/public-api';
+import { RouterModule } from '@angular/router';
 import { FuseHorizontalNavigationBasicItemComponent } from '@fuse/components/navigation/horizontal/components/basic/basic.component';
 import { FuseHorizontalNavigationBranchItemComponent } from '@fuse/components/navigation/horizontal/components/branch/branch.component';
 import { FuseHorizontalNavigationDividerItemComponent } from '@fuse/components/navigation/horizontal/components/divider/divider.component';
@@ -19,6 +18,7 @@ import { FuseVerticalNavigationDividerItemComponent } from '@fuse/components/nav
 import { FuseVerticalNavigationGroupItemComponent } from '@fuse/components/navigation/vertical/components/group/group.component';
 import { FuseVerticalNavigationSpacerItemComponent } from '@fuse/components/navigation/vertical/components/spacer/spacer.component';
 import { FuseVerticalNavigationComponent } from '@fuse/components/navigation/vertical/vertical.component';
+import { FuseScrollbarModule } from '@fuse/directives/scrollbar/public-api';
 
 @NgModule({
     declarations: [

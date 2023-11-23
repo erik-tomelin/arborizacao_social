@@ -1,21 +1,23 @@
+import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
-import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
+import { MatTooltipModule } from '@angular/material/tooltip';
 import { RouterModule } from '@angular/router';
-import { FuseFullscreenModule } from '@fuse/components/fullscreen';
 import { FuseLoadingBarModule } from '@fuse/components/loading-bar';
 import { FuseNavigationModule } from '@fuse/components/navigation';
-import { SearchModule } from 'app/layout/common/search/search.module';
+import { SearchModule } from 'app/modules/landing/component/search/search.module';
+import { MainPageComponent } from 'app/modules/landing/main-page/main-page.component';
 import { SharedModule } from 'app/shared/shared.module';
-import { MaterialLayoutComponent } from 'app/layout/layouts/horizontal/material/material.component';
+import { PlantsComponent } from './plants/plants.component';
 
 @NgModule({
     declarations: [
-        MaterialLayoutComponent
+        MainPageComponent,
+        PlantsComponent,
     ],
     imports: [
         HttpClientModule,
@@ -24,15 +26,16 @@ import { MaterialLayoutComponent } from 'app/layout/layouts/horizontal/material/
         MatDividerModule,
         MatIconModule,
         MatMenuModule,
-        FuseFullscreenModule,
+        MatTooltipModule,
         FuseLoadingBarModule,
         FuseNavigationModule,
         SearchModule,
         SharedModule,
+        CommonModule,
     ],
     exports: [
-        MaterialLayoutComponent
-    ]
+        MainPageComponent,
+    ],
 })
-export class MaterialLayoutModule {
+export class MainPageModule {
 }
