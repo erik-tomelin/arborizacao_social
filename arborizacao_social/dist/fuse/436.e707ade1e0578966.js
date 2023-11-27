@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkfuse=self.webpackChunkfuse||[]).push([[436],{6436:(d,n,a)=>{a.r(n),a.d(n,{PlantDetailsModule:()=>e});var u=a(6895),t=a(4650);let e=(()=>{class l{}return l.\u0275fac=function(o){return new(o||l)},l.\u0275mod=t.oAB({type:l}),l.\u0275inj=t.cJS({imports:[u.ez]}),l})()}}]);
