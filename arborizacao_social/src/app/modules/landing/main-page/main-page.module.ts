@@ -9,7 +9,7 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { RouterModule } from '@angular/router';
 import { FuseLoadingBarModule } from '@fuse/components/loading-bar';
 import { FuseNavigationModule } from '@fuse/components/navigation';
-import { SearchModule } from 'app/modules/landing/component/search/search.module';
+import { SearchModule } from 'app/modules/landing/components/search/search.module';
 import { MainPageComponent } from 'app/modules/landing/main-page/main-page.component';
 import { SharedModule } from 'app/shared/shared.module';
 import { PlantsComponent } from './plants/plants.component';

@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { PlantsService } from 'app/modules/landing/main-page/plants/plants-service';
+import { PlantsService } from 'app/modules/landing/main-page/plants/plants.service';
 import { Plant } from './plants.modal';
 import { Router } from '@angular/router';
 
@@ -33,7 +33,9 @@ export class PlantsComponent implements OnInit {
   }
 
   public goToPlantDetails(plant: Plant) {
-    if (plant && plant.scientific_name) {
+    if (plant?.scientific_name) {
+      localStorage.setItem('plantId', plant.id.toString());
+      
       this._plantsService.setPlant(plant);
       this._router.navigateByUrl('/arborizacaoSocial/' + plant.scientific_name.toLowerCase().replace(/\s+/g, "_"));
     } else {

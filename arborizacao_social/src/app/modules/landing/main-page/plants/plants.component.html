@@ -3,43 +3,42 @@
         <div class="flex flex-row justify-center">
             <div *ngIf="listPlant && listPlant.length > 0" class="flex w-full flex-wrap justify-center gap-4">
                 <div *ngFor="let plant of listPlant">
-                    <div class="w-full max-w-sm rounded overflow-hidden shadow-lg transform transition duration-500 hover:scale-110 flex justify-between items-center group relative animate-fade animate-ease-out">
+                    <div
+                        class="w-100 h-50 max-w-sm rounded overflow-hidden shadow-lg transform transition duration-500 hover:scale-110 flex justify-between items-center group relative animate-fade animate-ease-out">
                         <img class="w-1/2 h-50" src="assets/planta.jpg" alt="{{plant.common_name}}">
-                        <div class="flex flex-col w-full justify-start content-between">
+
+                        <div class="flex h-50 flex-col w-full justify-start content-between z-20">
                             <div class="p-3">
                                 <div class="font-bold text-xl mb-2">
                                     {{plant.common_name}}
                                 </div>
-                                
+
                                 <p class="text-gray-700 text-base">
                                     {{plant.scientific_name}}
                                 </p>
                             </div>
 
-                            <div class="p-2 flex flex-col">
-                                <button class="w-1/2 inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-                                    {{plant.plant_type}}
-                                </button>
-                                <button class="w-1/2 inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-                                    {{plant.difficult}}
+                            <button
+                                class="w-1/2 inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 m-2">
+                                {{plant.difficult}}
+                            </button>
+                        </div>
+
+                        <div class="flex w-full h-full absolute">
+                            <div class="flex w-1/2 h-1/5 self-end">
+                                <button
+                                    class="z-10 w-full h-full invisible group-hover:visible px-10 py-2 bg-green-300 text-white"
+                                    (click)="goToPlantDetails(plant)">
+                                    Detalhes
                                 </button>
                             </div>
                         </div>
-                        
-                        <button 
-                            class="transform transition duration-500 hover:scale-105 invisible group-hover:visible  
-                                absolute px-10 py-2 mt-30
-                                mx-7 bg-blue-500 text-white"
-                                [routerLink]="['/users', username]"
-                            (click)="goToPlantDetails(plant)">
-                            Button
-                        </button>
                     </div>
                 </div>
             </div>
             <div *ngIf="!listPlant || listPlant.length === 0">
                 <svg class="motion-reduce:hidden animate-spin ..." viewBox="0 0 24 24"><!-- ... --></svg>
-                Processing...
+                Carregando...
             </div>
         </div>
     </div>

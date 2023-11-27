@@ -1,6 +1,85 @@
+<div class="w-full h-130 rounded overflow-hidden shadow-lg flex bg-gray-200 bg-card py-10 pr-0">
+    <section class="product h-1/2 w-1/2">
+        <div #productImage class="product-image" (click)="turnModalOn()">
+            <img class="img" src="../../../../../../assets/planta.jpg" alt="Product" loading="lazy">
+            <img class="img" src="../../../../../../assets/planta.jpg" alt="Product" loading="lazy">
+            <img class="img" src="../../../../../../assets/planta.jpg" alt="Product" loading="lazy">
+            <img class="img" src="../../../../../../assets/planta.jpg" alt="Product" loading="lazy">
+            <img (click)="previous()" class="previous" src="../../assets/images/icon-previous.svg" alt="Previous"
+                loading="lazy">
+            <img (click)="next()" class="next" src="../../assets/images/icon-next.svg" alt="Next" loading="lazy">
+        </div>
+        <div #productThumbnails class="product-thumbnails">
+            <img (click)="handleClickThumbnail($event, 0)" src="../../../../../../assets/planta.jpg" alt="Thumbnail 1"
+                loading="lazy">
+            <img (click)="handleClickThumbnail($event, 1)" src="../../../../../../assets/planta.jpg" alt="Thumbnail 2"
+                loading="lazy">
+            <img (click)="handleClickThumbnail($event, 2)" src="../../../../../../assets/planta.jpg" alt="Thumbnail 3"
+                loading="lazy">
+            <img (click)="handleClickThumbnail($event, 3)" src="../../../../../../assets/planta.jpg" alt="Thumbnail 4"
+                loading="lazy">
+        </div>
+    </section>
+    <div *ngIf="!plantDetailed">
+        <svg class="motion-reduce:hidden animate-spin ..." viewBox="0 0 24 24"><!-- ... --></svg>
+        Carregando...
+    </div>
+    <section *ngIf="plantDetailed" class="intro w-full h-full py-12 mx-4">
+        <div class="w-full flex flex-row">
+            <div class="w-1/2">
+                <label for="product">{{ plant.scientific_name }}</label>
+                <h1 id="product product-intro">{{ plant.common_name }}</h1>
 
-<div *ngIf="plant">
-    <h2>{{ plant.common_name }}</h2>
-    <p>Scientific Name: {{ plant.scientific_name }}</p>
-    <!-- Outros detalhes da planta -->
+                <div class="flex flex-col">
+                    <label>Nome Popular: </label>
+                    <p>{{plant.common_name}}</p>
+
+                    <label>Família Botânica: {{plantDetailed.botanical_family}}</label>
+
+                    <label>Dimensão(m): {{plantDetailed.dimension}}</label>
+
+                    <label>Luminosidade: {{plantDetailed.luminosity}}</label>
+
+                    <label>Rega: {{plantDetailed.watering}}</label>
+                </div>
+            </div>
+
+            <div class="w-1/3 flex flex-col btn justify-between">
+                <div class="price">
+                    <h1>R${{ plantDetailed.price.toFixed(2)}}</h1>
+                </div>
+
+                <div class="flex flex-col justify-center">
+                    <div class="w-full btn-plus-subtract">
+                        <button (click)="decrease()">
+                            <i class="w-1/3 p-2 bg-grey-600 rounded fa-solid fa-minus" alt="Minus" loading="lazy">
+                            </i>
+                        </button>
+
+                        <span class="flex w-1/3 justify-center">{{ numberOfItems }}</span>
+
+                        <button (click)="increase()">
+                            <i class="w-1/3 p-2 bg-grey-600 rounded fa-solid fa-plus" alt="Plus" loading="lazy">
+                            </i>
+                        </button>
+                    </div>
+                    <button #btnAdd class="btn-add text-white bg-gray-500" type="button" (click)="addItemsToCart()">
+                        <svg class="color-white" width="22" height="20" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M20.925 3.641H3.863L3.61.816A.896.896 0 0 0 2.717 0H.897a.896.896 0 1 0 0 1.792h1l1.031 11.483c.073.828.52 1.726 1.291 2.336C2.83 17.385 4.099 20 6.359 20c1.875 0 3.197-1.87 2.554-3.642h4.905c-.642 1.77.677 3.642 2.555 3.642a2.72 2.72 0 0 0 2.717-2.717 2.72 2.72 0 0 0-2.717-2.717H6.365c-.681 0-1.274-.41-1.53-1.009l14.321-.842a.896.896 0 0 0 .817-.677l1.821-7.283a.897.897 0 0 0-.87-1.114ZM6.358 18.208a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm10.015 0a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm2.021-7.243-13.8.81-.57-6.341h15.753l-1.383 5.53Z"
+                                fill="var(--pale-orange)" fill-rule="nonzero" />
+                        </svg>
+                        <span>Adicionar ao Carrinho</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<div class="w-full h-130 rounded px-10 py-5">
+    <section class="intro">
+        <h1>Descrição Geral</h1>
+        <p class="py-2 whitespace-pre-wrap">{{ plantDetailed.general_description }}</p>
+    </section>
 </div>

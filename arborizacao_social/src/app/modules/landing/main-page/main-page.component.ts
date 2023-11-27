@@ -10,7 +10,7 @@ import { FUSE_VERSION } from '@fuse/version';
 import { AppConfig } from 'app/core/config/app.config';
 import { NavigationService } from 'app/core/navigation/navigation.service';
 import { Navigation } from 'app/core/navigation/navigation.types';
-import { PlantsService } from 'app/modules/landing/main-page/plants/plants-service';
+import { PlantsService } from 'app/modules/landing/main-page/plants/plants.service';
 import { Subject, combineLatest, map, takeUntil } from 'rxjs';
 import { DialogComponent } from './plants/dialog/dialog.component';
 

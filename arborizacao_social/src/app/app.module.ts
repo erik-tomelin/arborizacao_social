@@ -11,7 +11,7 @@ import { appConfig } from 'app/core/config/app.config';
 import { CoreModule } from 'app/core/core.module';
 import { mockApiServices } from 'app/mock-api';
 import { MarkdownModule } from 'ngx-markdown';
-import { PlantDetailsComponent } from './modules/landing/main-page/plants/plant-details/plant-details.component';
+import { MenuComponent } from './modules/landing/componets/menu/menu.component';
 
 const routerConfig: ExtraOptions = {
     preloadingStrategy: PreloadAllModules,
@@ -21,6 +21,7 @@ const routerConfig: ExtraOptions = {
 @NgModule({
     declarations: [
         AppComponent,
+        MenuComponent
     ],
     imports: [
         BrowserModule,
