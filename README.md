@@ -16,7 +16,7 @@ Na imagem abaixo tem toda a arquitetura do projeto, tendo da pasta src/app
 
 ![image](https://github.com/erik-tomelin/arborizacao_social/assets/63420907/8fb7ce04-eb9c-4951-b1c5-7c3b7eea7bb7)
 
-Abaixo tem os arquivos base de requisição para facilitar a contrução de novas requisições e o service que se conecta com o Supabase tal como na imagem abaixo
+Abaixo tem os arquivos base de requisição para facilitar a contrução de novas requisições e o service que se conecta com o Supabase tal como na imagem abaixo
 
 ![image](https://github.com/erik-tomelin/arborizacao_social/assets/63420907/b33ca393-b9e7-47b5-a912-e400a418839e)
 
@@ -27,6 +27,7 @@ Será adotado o fluxo de controle baseado em GitFlow, com branches de *feature* 
 
 #### Gestão de Demandas e Chamados
 Link do Trello publico abaixo.
+
 https://trello.com/invite/b/6C7uAJdR/ATTI25913eaa049e86cfbba79371268d841bA6C56C20/software-arborizacao-social
 
 #### Publicação
@@ -34,15 +35,12 @@ A publicação é automatizada através da integração com o Vercel (que usa CI
 
 ## Diagramas 
 
-### Entidade e Relacionamento (UML)
+### Entidade e Relacionamento do banco do Supabse
 
-![casoDeUso(arborizacao) drawio](https://github.com/erik-tomelin/arborizacao_social/assets/63420907/d536153b-4eb3-498b-a692-484f06410ada)
+Por conta da complexidade do projeto, não foi preciso muitos relacionamentos entre tabelas, seguindo também a ideia de ter o minimo de dados vinculados ao banco de dados.
+![image](https://github.com/erik-tomelin/arborizacao_social/assets/63420907/47912715-c9f4-42ff-a9a3-41511fdbcf1e)
 
-### Diagrama de classes
-
-![class_diagram_PAS drawio](https://github.com/erik-tomelin/arborizacao_social/assets/63420907/5e413ab6-295e-4760-a74b-493bc8c27d60)
-
-## C4 model
+## C4 model (Vizualição Simplificada do funcionamento do Software)
 
 ![C4(2)](https://github.com/erik-tomelin/arborizacao_social/assets/63420907/26d60e8a-29a0-42c1-98fb-4d99f4091f98)
 ![C4(1)](https://github.com/erik-tomelin/arborizacao_social/assets/63420907/959275a8-d7d4-4d91-a5da-af7297bd23b6)
