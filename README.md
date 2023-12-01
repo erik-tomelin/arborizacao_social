@@ -1,58 +1,36 @@
 # Venda de Plantas Sob Demanda - Software Arborização Social
 
-Este repositório contém o projeto de software para um sistema de venda de plantas sob demanda, utilizando Angular 13+ no frontend. O objetivo deste documento é fornecer uma visão geral da arquitetura do software, suas decisões arquiteturais e o processo de gestão relacionado.
+O objetivo deste documento é fornecer uma visão geral da arquitetura do software e a contextualização do sistema, suas decisões arquiteturais e o processo de gestão relacionado.
+
+## Contextualização
+
+Esse software segue uma demanda de incentivo ao cultivo individu, pois vendemos as plantas por um preço mais barato por serem vendidas depois que ela jerminou. O site forcene informações importantes para entender como funciona o cultivo. No final da compra, o usuário é redirecionado para o Whatsapp para continuar com a compra, enviando os dados do site para a conversa do whatsapp, com os dados do nome da planta e o preço.
 
 ## Arquitetura de Software
 
-O documento de arquitetura de software tem como objetivo definir uma estratégia que permita aos componentes do software atingir os objetivos de negócio, garantindo a entrega dos atributos de qualidade e o cumprimento das restrições estabelecidas.
+O sistema foi desenvolvido em Typescript / Angular 14+ e para banco de dados e armazenamento de arquivos foi utilizado o Supabase. Para estilização, foi utilizado SCSS, Tailwind css e fontawesome para fonts.
 
-### Introdução
+O sistema é todo componentizado para facilitar a criação de um novo componente. 
+Todas as funções de um componente ficam em sua respectiva pasta, onde cada pasta acompanha uma view (.html), um controller (.ts), um arquivo de estlização (.scss [Opcional]), arquivo de testes (.spec), uma model (.model.ts) e um service (.service.ts).
+Na imagem abaixo tem toda a arquitetura do projeto, tendo da pasta src/app
 
-#### Objetivo
-O objetivo deste software é oferecer aos usuários a capacidade de comprar plantas sob demanda de forma conveniente, eficiente e acessível financeiramente.
+![image](https://github.com/erik-tomelin/arborizacao_social/assets/63420907/8fb7ce04-eb9c-4951-b1c5-7c3b7eea7bb7)
 
-#### Escopo
-O escopo abrange o desenvolvimento do frontend utilizando Angular 13+ e sua integração com os demais componentes do sistema.
+Abaixo tem os arquivos base de requisição para facilitar a contrução de novas requisições e o service que se conecta com o Supabase tal como na imagem abaixo
 
-#### Contexto
-O sistema se insere no mercado de jardinagem e vendas online, visando atender a demanda por plantas de forma personalizada.
+![image](https://github.com/erik-tomelin/arborizacao_social/assets/63420907/b33ca393-b9e7-47b5-a912-e400a418839e)
 
-#### Restrições
-- Utilização exclusiva de Angular 13+ no frontend.
-- Contrução do backend (Possivelmente Java) com APIs.
-- Uso da AWS com banco de dados.
-
-## Visão Geral
-
-O sistema consiste em um frontend desenvolvido em Angular 13+ que se conecta a APIs backend usando Java para realizar as operações de venda de plantas sob demanda. A integração será realizada via requisições HTTP, seguindo os padrões REST.
-
-### Arquitetura de Decisões (ADR)
-
-Os Documentos de Decisões Arquiteturais (ADR) são usados para registrar as decisões-chave tomadas durante o processo de design e desenvolvimento do sistema. Cada ADR seguirá o modelo abaixo:
-
-**Título**: Título descritivo da decisão.
-**Status**: Status atual da decisão (Proposta, Aceita, Rejeitada, Implementada, etc.).
-**Alternativas**: Opções consideradas para a decisão.
-**Decisão**: Escolha final e justificativa.
-**Consequências**: Impacto da decisão no sistema e no negócio.
-
-### Gestão de Configuração
-
-#### Controle de Versão
-O controle de versão será realizado através do Git, utilizando o GitHub como plataforma de hospedagem. Serão utilizados commits semânticos para um melhor rastreamento das alterações.
+### Gestão
 
 #### Fluxo de Controle
 Será adotado o fluxo de controle baseado em GitFlow, com branches de *feature* e *master*.
 
 #### Gestão de Demandas e Chamados
-A gestão de demandas e chamados será feita através de (*issues*) no GitHub. Será utilizada a abordagem de *Kanban* para organizar e priorizar as demandas.
+Link do Trello publico abaixo.
+https://trello.com/invite/b/6C7uAJdR/ATTI25913eaa049e86cfbba79371268d841bA6C56C20/software-arborizacao-social
 
 #### Publicação
-A publicação será automatizada através da integração contínua (CI/CD). A cada nova versão, uma pipeline será acionada para realizar o build do frontend e implantá-lo em um ambiente de homologação. Após testes bem-sucedidos, a implantação ocorrerá no ambiente de produção.
-
-## Considerações Finais
-
-Este README fornece uma visão geral da arquitetura do projeto de venda de plantas sob demanda, detalhando as decisões arquiteturais, gestão de configuração e publicação. Mantendo esse documento atualizado e seguindo as diretrizes aqui definidas, o desenvolvimento e manutenção do sistema serão conduzidos de forma eficaz e alinhada aos objetivos de negócio.
+A publicação é automatizada através da integração com o Vercel (que usa CI/CD). A cada nova versão, uma pipeline é acionada e realiza o build do frontend no Ambiente de Homologação.
 
 ## Diagramas 
 
