@@ -21,6 +21,10 @@ Abaixo estão os arquivos base de requisição para facilitar a construção de 
 
 ![image](https://github.com/erik-tomelin/arborizacao_social/assets/63420907/b33ca393-b9e7-47b5-a912-e400a418839e)
 
+#Monitoramento do código
+
+Para monitóramento, foi usado o Lint e o SonarLint para avaliar a qualidade e padronização do código.
+
 ### Gestão
 
 #### Fluxo de Controle
@@ -33,6 +37,17 @@ https://trello.com/invite/b/6C7uAJdR/ATTI25913eaa049e86cfbba79371268d841bA6C56C2
 
 #### Publicação
 A publicação é automatizada através da integração com o Vercel (que usa CI/CD). A cada nova versão, uma pipeline é acionada e realiza o build do frontend no Ambiente de Homologação.
+
+![image](https://github.com/erik-tomelin/arborizacao_social/assets/63420907/86f779f4-3f43-46e8-852b-fc2e9f00da4a)
+
+# Integrações
+
+Foi integrado no Vercel o Supabase, para ter acesso ao banco de dados e o NewRelic, que ajuda a avaliar o desempenho de software e do hardware que operadoram os serviços.
+![image](https://github.com/erik-tomelin/arborizacao_social/assets/63420907/8a91d5a5-689b-4035-8e25-e5f4bf80a233)
+
+Também foi utilizado o SonarCloud para verificar bugs relacionados ao projeto e a qualidade do código em si
+
+![image](https://github.com/erik-tomelin/arborizacao_social/assets/63420907/965cc5b6-fd9d-4bae-a7fd-527fb54c85a2)
 
 ## Diagramas 
 
