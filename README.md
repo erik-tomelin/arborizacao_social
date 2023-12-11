@@ -46,11 +46,8 @@ A publicação é automatizada através da integração com o Vercel (que usa CI
 Foi integrado no Vercel o Supabase, para ter acesso ao banco de dados e o NewRelic, que ajuda a avaliar o desempenho de software e do hardware que operadoram os serviços.
 ![image](https://github.com/erik-tomelin/arborizacao_social/assets/63420907/8a91d5a5-689b-4035-8e25-e5f4bf80a233)
 
-![image](https://github.com/erik-tomelin/arborizacao_social/assets/63420907/be0bc27d-3db7-4cab-92d8-9a23a9449fb2)
-
 Também foi utilizado o SonarCloud para verificar bugs relacionados ao projeto e a qualidade do código em si
-
-![image](https://github.com/erik-tomelin/arborizacao_social/assets/63420907/965cc5b6-fd9d-4bae-a7fd-527fb54c85a2)
+![image](https://github.com/erik-tomelin/arborizacao_social/assets/63420907/be0bc27d-3db7-4cab-92d8-9a23a9449fb2)
 
 ## Diagramas 
 
@@ -59,7 +56,5 @@ Também foi utilizado o SonarCloud para verificar bugs relacionados ao projeto e
 Devido à complexidade do projeto, não foram necessários muitos relacionamentos entre tabelas, seguindo a ideia de minimizar os dados vinculados ao banco de dados.
 ![image](https://github.com/erik-tomelin/arborizacao_social/assets/63420907/47912715-c9f4-42ff-a9a3-41511fdbcf1e)
 
-## C4 model (Vizualição Simplificada do funcionamento do Software)
-
-![C4(2)](https://github.com/erik-tomelin/arborizacao_social/assets/63420907/26d60e8a-29a0-42c1-98fb-4d99f4091f98)
-![C4(1)](https://github.com/erik-tomelin/arborizacao_social/assets/63420907/959275a8-d7d4-4d91-a5da-af7297bd23b6)
+No escopo inicial, tinha outra tabela pra fotos, mas por conta de performance, foi criada a coluna photo_url1 e photo_url2 pra substituir essa tabela e deixar mais performático
+Juntamento com a tabela plant_datail que contem também as photo_url3 e photo_url4
