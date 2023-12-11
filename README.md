@@ -46,6 +46,8 @@ A publicação é automatizada através da integração com o Vercel (que usa CI
 Foi integrado no Vercel o Supabase, para ter acesso ao banco de dados e o NewRelic, que ajuda a avaliar o desempenho de software e do hardware que operadoram os serviços.
 ![image](https://github.com/erik-tomelin/arborizacao_social/assets/63420907/8a91d5a5-689b-4035-8e25-e5f4bf80a233)
 
+![image](https://github.com/erik-tomelin/arborizacao_social/assets/63420907/be0bc27d-3db7-4cab-92d8-9a23a9449fb2)
+
 Também foi utilizado o SonarCloud para verificar bugs relacionados ao projeto e a qualidade do código em si
 
 ![image](https://github.com/erik-tomelin/arborizacao_social/assets/63420907/965cc5b6-fd9d-4bae-a7fd-527fb54c85a2)
