@@ -54,6 +54,7 @@ Também foi utilizado o SonarCloud para verificar bugs relacionados ao projeto e
 ### Entidade e Relacionamento do banco de dados (Supabse)
 
 Devido à complexidade do projeto, não foram necessários muitos relacionamentos entre tabelas, seguindo a ideia de minimizar os dados vinculados ao banco de dados.
+
 ![image](https://github.com/erik-tomelin/arborizacao_social/assets/63420907/47912715-c9f4-42ff-a9a3-41511fdbcf1e)
 
 No escopo inicial, tinha outra tabela pra fotos, mas por conta de performance, foi criada a coluna photo_url1 e photo_url2 pra substituir essa tabela e deixar mais performático
